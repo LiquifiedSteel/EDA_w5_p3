@@ -1,10 +1,26 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+let myCollection = [];
 
-
-
-
-
+function addToCollection (collection, title, artist, yearPublished) {
+  let newRecord = {
+    title,
+    artist,
+    yearPublished,
+  }
+  collection.push(newRecord);
+  return newRecord;
+}
+console.log( 'adding You Can Do Better by Blacklite District', addToCollection(myCollection, 'You Can Do Better', 'Blacklite District', 2024) );
+console.log( 'adding You\'re Welcome - XL by Blacklite District', addToCollection(myCollection, 'You\'re Welcome - XL', 'Blacklite District', 2023) );
+console.log( 'adding Blacklite District - XL by Blacklite District', addToCollection(myCollection, 'Blacklite District - XL', 'Blacklite District', 2023) );
+console.log( 'adding 1990 - XL by Blacklite District', addToCollection(myCollection, '1990 - XL', 'Blacklite District', 2022) );
+console.log( 'adding Souled Out by Blacklite District', addToCollection(myCollection, 'Souled Out', 'Blacklite District', 2019) );
+console.log( 'adding Through the Ages by Blacklite District', addToCollection(myCollection, 'Through the Ages', 'Blacklite District', 2018) );
+console.log( 'adding Instant Gratification by Blacklite District', addToCollection(myCollection, 'Instant Gratification', 'Blacklite District', 2017) );
+console.log( 'adding To Whom It May Concern by Blacklite District', addToCollection(myCollection, 'To Whom It May Concern', 'Blacklite District', 2016) );
+console.log( 'adding Worldwide Controversy by Blacklite District', addToCollection(myCollection, 'Worldwide Controversy', 'Blacklite District', 2014) );
+console.log( 'testing myCollection', myCollection );
 
 
 
