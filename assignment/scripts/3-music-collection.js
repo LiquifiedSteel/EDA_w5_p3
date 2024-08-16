@@ -1,7 +1,8 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 let myCollection = [];
-
+// addToCollection takes an array for the collection. Also an album title, an artist, and a publishing year and adds them all to an object, then
+// adds the object to the collection array.
 function addToCollection (collection, title, artist, yearPublished) {
   let newRecord = {
     title,
