@@ -23,6 +23,18 @@ console.log( 'adding Worldwide Controversy by Blacklite District', addToCollecti
 console.log( 'testing myCollection', myCollection );
 
 
+function findByArtist (collection, artist) {
+  let collect = [];
+  for (i of collection) {
+    if (i.artist === artist) {
+      collect.push(i);
+    }
+  }
+  return collect;
+}
+console.log( 'testing findByArtist part 1:', addToCollection(myCollection, 'FREDDY', 'CG5', 2024) );
+console.log( 'testing findByArtist part 2, should only return FREDDY by CG5:', findByArtist(myCollection, 'CG5') );
+
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
