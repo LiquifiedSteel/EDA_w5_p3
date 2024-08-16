@@ -23,6 +23,15 @@ console.log( 'adding Worldwide Controversy by Blacklite District', addToCollecti
 console.log( 'testing myCollection', myCollection );
 
 
+function showCollection (collection) {
+  for (i of collection) {
+    console.log( i.title + ' by ' + i.artist + ' from ' + i.yearPublished );
+  }
+  return true;
+}
+console.log ( 'showCollection test :', showCollection(myCollection) );
+
+
 function findByArtist (collection, artist) {
   let collect = [];
   for (i of collection) {
@@ -34,6 +43,7 @@ function findByArtist (collection, artist) {
 }
 console.log( 'testing findByArtist part 1:', addToCollection(myCollection, 'FREDDY', 'CG5', 2024) );
 console.log( 'testing findByArtist part 2, should only return FREDDY by CG5:', findByArtist(myCollection, 'CG5') );
+console.log( 'testing findByArtist part 2, should only return FREDDY by CG5:', findByArtist(myCollection, 'Blacklight Disstrict') );
 
 
 
