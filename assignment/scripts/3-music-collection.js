@@ -12,6 +12,7 @@ function addToCollection (collection, title, artist, yearPublished) {
   collection.push(newRecord);
   return newRecord;
 }
+// testing for addToCollection, adds all Blacklite District albums to myCollection
 console.log( 'adding You Can Do Better by Blacklite District', addToCollection(myCollection, 'You Can Do Better', 'Blacklite District', 2024) );
 console.log( 'adding You\'re Welcome - XL by Blacklite District', addToCollection(myCollection, 'You\'re Welcome - XL', 'Blacklite District', 2023) );
 console.log( 'adding Blacklite District - XL by Blacklite District', addToCollection(myCollection, 'Blacklite District - XL', 'Blacklite District', 2023) );
@@ -23,7 +24,7 @@ console.log( 'adding To Whom It May Concern by Blacklite District', addToCollect
 console.log( 'adding Worldwide Controversy by Blacklite District', addToCollection(myCollection, 'Worldwide Controversy', 'Blacklite District', 2014) );
 console.log( 'testing myCollection', myCollection );
 
-
+// the function showCollection takes the desired collection as input and then console.logs every object (album) in the collection
 function showCollection (collection) {
   for (i of collection) {
     console.log( i.title + ' by ' + i.artist + ' from ' + i.yearPublished );
@@ -32,7 +33,8 @@ function showCollection (collection) {
 }
 console.log ( 'showCollection test :', showCollection(myCollection) );
 
-
+// the function findByArtist takes the desired collection as well as the artist to search for and loops through the input collection and adds
+// every object with the desired artist to a new array and returns the new collection of albums from only the desired artist
 function findByArtist (collection, artist) {
   let collect = [];
   for (i of collection) {
