@@ -46,8 +46,28 @@ function findByArtist (collection, artist) {
 }
 console.log( 'testing findByArtist part 1:', addToCollection(myCollection, 'FREDDY', 'CG5', 2024) );
 console.log( 'testing findByArtist part 2, should only return FREDDY by CG5:', findByArtist(myCollection, 'CG5') );
-console.log( 'testing findByArtist part 2, should only return FREDDY by CG5:', findByArtist(myCollection, 'Blacklight Disstrict') );
+console.log( 'testing findByArtist part 3, should return all Blacklite District albums', findByArtist(myCollection, 'Blacklite District') );
 
+
+
+function search (collection, searchObj) {
+  let collect = [];
+  console.log( 'running' );
+  for (i of collection) {
+    if (!searchObj || !searchObj.artist || !searchObj.yearPublished) {
+      return collection;
+    }
+    if (i.artist === searchObj.artist) {
+      if (i.yearPublished === searchObj.yearPublished) {
+        collect.push(i)
+      }
+    }
+  }
+  return collect;
+}
+console.log( 'testing search, should return Souled Out album:', search(myCollection, { artist: 'Blacklite District', yearPublished: 2019 }) );
+console.log( 'testing search, should return You\'re Welcome - XL and Blacklite District - XL albums:', search(myCollection, { artist: 'Blacklite District', yearPublished: 2023 }) );
+console.log( 'testing search:', search(myCollection, { artist: '', yearPublished: 2023 }) );
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
