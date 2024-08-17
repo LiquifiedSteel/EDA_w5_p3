@@ -68,7 +68,7 @@ function search (collection, searchObj) {
 console.log( 'testing search, should return Souled Out album:', search(myCollection, { artist: 'Blacklite District', yearPublished: 2019 }) );
 console.log( 'testing search, should return You\'re Welcome - XL and Blacklite District - XL albums:', search(myCollection, { artist: 'Blacklite District', yearPublished: 2023 }) );
 console.log( 'testing search:', search(myCollection, { artist: '', yearPublished: 2023 }) );
-
+console.log( 'testing search:', search(myCollection, { artist: ''}) );
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
