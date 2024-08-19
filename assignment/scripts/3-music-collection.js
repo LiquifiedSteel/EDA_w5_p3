@@ -26,7 +26,7 @@ console.log( 'testing myCollection', myCollection );
 
 // the function showCollection takes the desired collection as input and then console.logs every object (album) in the collection
 function showCollection (collection) {
-  for (i of collection) {
+  for (let i of collection) {
     console.log( i.title + ' by ' + i.artist + ' from ' + i.yearPublished );
   }
   return true;
@@ -37,7 +37,7 @@ console.log ( 'showCollection test :', showCollection(myCollection) );
 // every object with the desired artist to a new array and returns the new collection of albums from only the desired artist
 function findByArtist (collection, artist) {
   let collect = [];
-  for (i of collection) {
+  for (let i of collection) {
     if (i.artist === artist) {
       collect.push(i);
     }
@@ -53,7 +53,7 @@ console.log( 'testing findByArtist part 3, should return all Blacklite District 
 function search (collection, searchObj) {
   let collect = [];
   console.log( 'running' );
-  for (i of collection) {
+  for (let i of collection) {
     if (!searchObj || !searchObj.artist || !searchObj.yearPublished) {
       return collection;
     }
